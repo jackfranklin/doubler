@@ -2,6 +2,10 @@
 
 Simple test doubles for NodeJS testing purposes, designed for usage when tools like Sinon offer more power than your project needs.
 
+```sh
+npm install --save-dev doubler
+```
+
 ## Documentation
 
 Until I am able to write up proper docs, the best place to look is the [test file](https://github.com/jackfranklin/doubler/blob/master/test/doubles.js), which shows the API nicely.

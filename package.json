@@ -6,6 +6,12 @@
   "scripts": {
     "test": "./node_modules/.bin/mocha test"
   },
+  "keywords": [
+    "testing",
+    "doubles",
+    "stubs",
+    "test"
+  ],
   "author": "Jack Franklin",
   "license": "ISC",
   "devDependencies": {
