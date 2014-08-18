@@ -26,6 +26,13 @@ describe('stubs', function() {
     expect(Foo.get()).to.eql('foo');
   });
 
+  it('passes any arguments through', function() {
+    new Stub(Foo, 'get').callFunction(function(a, b) {
+      return a + b;
+    });
+    expect(Foo.get(2, 2)).to.eql(4);
+  });
+
   it('can let a stub exist for ever', function() {
     var stub = new Stub(Foo, 'get').persist().returnValue(1);
     expect(Foo.get()).to.eql(1);
