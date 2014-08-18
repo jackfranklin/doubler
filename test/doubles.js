@@ -1,5 +1,5 @@
 var expect = require('expect.js');
-var Double = require('../index');
+var Double = require('../lib/double');
 
 describe('Doubles', function() {
   it('can fake out a method', function() {
