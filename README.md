@@ -50,6 +50,9 @@ Foo.get(); //=> 2
 
 ## Changelog
 
+#### V0.2.1
+- pass arguments through to stubbed functions
+
 #### V0.2.0
 - added basic Stubs
 
