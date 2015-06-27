@@ -24,6 +24,13 @@ describe('Doubles', function() {
     expect(double.foo.callCount).to.eql(2);
   });
 
+  it('keeps track of arguments in the func calls', function() {
+    var double = new Double({ foo: function() {} });
+    double.foo('bar');
+
+    expect(double.foo.args[0]).to.eql(['bar']);
+  });
+
   it('can be told to stub as blank fn by default', function() {
     var double = new Double().functions('foo');
     expect(function() {
