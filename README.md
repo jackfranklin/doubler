@@ -20,6 +20,8 @@ var double = new Double({ foo: function() { return 2; } });
 double.foo(); //=> 2
 double.foo.called; //=> true
 double.foo.callCount; //=> 1
+double.foo('bar');
+double.args; //=> [[], ['bar']]
 ```
 
 ## Stubs
@@ -49,6 +51,9 @@ Foo.get(); //=> 2
 
 
 ## Changelog
+
+#### V0.3.0
+- doubles keep track of their arguments
 
 #### V0.2.1
 - pass arguments through to stubbed functions

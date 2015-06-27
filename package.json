@@ -1,6 +1,6 @@
 {
   "name": "doubler",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Basic test doubles for JavaScript testing",
   "main": "index.js",
   "scripts": {
