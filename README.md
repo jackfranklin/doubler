@@ -21,7 +21,8 @@ double.foo(); //=> 2
 double.foo.called; //=> true
 double.foo.callCount; //=> 1
 double.foo('bar');
-double.args; //=> [[], ['bar']]
+double.foo.args; //=> [[], ['bar']]
+double.foo.reset(); //=> resets double back to new state
 ```
 
 ## Stubs
@@ -51,6 +52,9 @@ Foo.get(); //=> 2
 
 
 ## Changelog
+
+#### V0.4.0
+- add `#reset` method to doubles to allow them to be set back to blank
 
 #### V0.3.0
 - doubles keep track of their arguments
