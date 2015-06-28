@@ -51,4 +51,16 @@ describe('Doubles', function() {
     expect(double.foo()).to.eql(1);
     expect(double.foo.called).to.eql(true);
   });
+
+  it('allows a double to be reset', function() {
+    var double = new Double({ foo: 1 });
+    double.foo('bar');
+    expect(double.foo.called).to.eql(true);
+    expect(double.foo.callCount).to.eql(1);
+    expect(double.foo.args).to.eql([['bar']]);
+    double.foo.reset();
+    expect(double.foo.called).to.eql(false);
+    expect(double.foo.args).to.eql([]);
+    expect(double.foo.callCount).to.eql(0);
+  });
 });
