@@ -9,6 +9,17 @@ describe('Doubles', function() {
     }).to.not.throwError();
   });
 
+  it('can generate just a regular function double', function() {
+    var double = Double.function(function() {
+      return 3;
+    });
+    expect(double()).to.eql(3);
+    expect(double.called).to.eql(true);
+  });
+
+  it('can generate a function double that takes a custom fn', function() {
+  });
+
   it('keeps track of if the method has been called', function() {
     var double = new Double({ foo: function() {} });
     expect(double.foo.called).to.eql(false);
