@@ -53,6 +53,9 @@ Foo.get(); //=> 2
 
 ## Changelog
 
+#### V0.5.0
+- Proxy properties from a Stub's underlying double through. You can now call `args`, `callCount` and `called` on a stub.
+
 #### V0.4.0
 - add `#reset` method to doubles to allow them to be set back to blank
 
