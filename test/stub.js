@@ -26,6 +26,25 @@ describe('stubs', function() {
     expect(Foo.get()).to.eql('foo');
   });
 
+  it('gives access to the callCount', function() {
+    var stub = new Stub(Foo, 'get').returnValue(1);
+    Foo.get();
+    expect(stub.callCount).to.eql(1);
+  });
+
+  it('gives access to the arguments', function() {
+    var stub = new Stub(Foo, 'get').callFunction(function() {
+    });
+    Foo.get('foo');
+    expect(stub.args).to.eql([['foo']]);
+  });
+
+  it('says when it has been called', function() {
+    var stub = new Stub(Foo, 'get').returnValue(1);
+    Foo.get('foo');
+    expect(stub.called).to.eql(true);
+  });
+
   it('passes any arguments through', function() {
     new Stub(Foo, 'get').callFunction(function(a, b) {
       return a + b;
